@@ -1,6 +1,6 @@
 {
   "name": "gas-translate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Language translation using Google apps script",
   "main": "index.js",
   "scripts": {
