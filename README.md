@@ -6,10 +6,10 @@ Language translation using Google Apps Script
 First, access https://script.google.com/home and edit code.gs
 ```js
 function doGet(e) {
-    var p = e.parameter;
+    var p = e.parameter
     var contentType = p.contentType != null ? 'text' : p.contentType
-    var translatedText = LanguageApp.translate(p.text, p.source, p.target, { contentType: contentType } );
-    return ContentService.createTextOutput(translatedText);
+    var translatedText = LanguageApp.translate( p.text, p.source, p.target, { contentType: contentType } )
+    return ContentService.createTextOutput( escape( translatedText ) )
 }
 ```
 Go to *Publish* -> *Publish as Web Application* and copy `Current web app URL`
