@@ -1,0 +1,7 @@
+{
+    "{5146CB31-9E8B-44C8-B23E-6E24349B22F3}": {
+        "source": "const request = require( 'httprequest' )\r\n\r\nconst replace = function translate_replace( html ) {\r\n    return html.replace( /(<\\/)( )([A-z]+>)/g, '$1$3')\r\n}\r\n\r\nconst translate = function translate_translate ( api, source = null, target = 'en', text, contentType ) {\r\n    const body = request( 'get', api, { params: { text, source, target, contentType } } )\r\n    if ( contentType === 'html' ) return replace( body )\r\n    return body\r\n}\r\n\r\nmodule.exports = translate",
+        "path": "{gas-translate}/index.js",
+        "mapping": {}
+    }
+}

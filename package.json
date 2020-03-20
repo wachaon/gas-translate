@@ -1,0 +1,25 @@
+{
+  "name": "gas-translate",
+  "version": "0.1.0",
+  "description": "Language translation using Google apps script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wachaon/gas-translate.git"
+  },
+  "keywords": [
+    "wes",
+    "Google Apps Script",
+    "gas",
+    "translate"
+  ],
+  "author": "wachaon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wachaon/gas-translate/issues"
+  },
+  "homepage": "https://github.com/wachaon/gas-translate#readme"
+}
