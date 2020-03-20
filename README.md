@@ -47,7 +47,7 @@ const ja = 'ja'
 const en = 'en'
 const zh = 'zh'
 
-const translate = require( '@wachaon/gas-translate' ).bind( null, api )
+const translate = require( '@wachaon/gas-translate' ).bind( null, api, en )
 
 const text = "Hello world."
 console.log( translate( ja, text ) ) // => "こんにちわ世界。"
