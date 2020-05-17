@@ -5,9 +5,9 @@ const replace = function translate_replace( html ) {
 }
 
 const translate = function translate_translate ( api, source = null, target = 'en', text, contentType ) {
-    const body = request( 'get', api, { params: { text, source, target, contentType } } )
-    if ( contentType === 'html' ) return unescape( replace( body ) )
-    return unescape( body )
+    const body = unescape(request( 'get', api, { params: { text, source, target, contentType } } ))
+    if ( contentType === 'html' ) return replace(  body )
+    return body
 }
 
 module.exports = translate

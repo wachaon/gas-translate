@@ -1,6 +1,6 @@
 {
-    "{D09C2BEE-1AC1-457B-BB44-789257A1E311}": {
-        "source": "const request = require( 'httprequest' )\r\n\r\nconst replace = function translate_replace( html ) {\r\n    return html.replace( /(<\\/)( )([A-z]+>)/g, '$1$3')\r\n}\r\n\r\nconst translate = function translate_translate ( api, source = null, target = 'en', text, contentType ) {\r\n    const body = request( 'get', api, { params: { text, source, target, contentType } } )\r\n    if ( contentType === 'html' ) return unescape( replace( body ) )\r\n    return unescape( body )\r\n}\r\n\r\nmodule.exports = translate",
+    "{FF2A3CBB-8743-410F-9D9D-EE2C51089297}": {
+        "source": "const request = require( 'httprequest' )\r\n\r\nconst replace = function translate_replace( html ) {\r\n    return html.replace( /(<\\/)( )([A-z]+>)/g, '$1$3')\r\n}\r\n\r\nconst translate = function translate_translate ( api, source = null, target = 'en', text, contentType ) {\r\n    const body = unescape(request( 'get', api, { params: { text, source, target, contentType } } ))\r\n    if ( contentType === 'html' ) return replace(  body )\r\n    return body\r\n}\r\n\r\nmodule.exports = translate",
         "path": "{gas-translate}/index.js",
         "mapping": {}
     }
