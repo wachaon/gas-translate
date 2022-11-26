@@ -1,0 +1,16 @@
+{
+  "{AE4D70D5-9B6D-48EE-AF27-6DC56EF9FD7D}": {
+    "source": "{\n  \"name\": \"gas-translate\",\n  \"version\": \"0.1.4\",\n  \"description\": \"Language translation using Google apps script\",\n  \"main\": \"./src/gas-translate.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/wachaon/gas-translate.git\"\n  },\n  \"keywords\": [\n    \"wes\",\n    \"Google Apps Script\",\n    \"gas\",\n    \"translate\"\n  ],\n  \"author\": \"wachaon\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/wachaon/gas-translate/issues\"\n  },\n  \"homepage\": \"https://github.com/wachaon/gas-translate#readme\"\n}",
+    "mapping": {},
+    "path": "{gas-translate}/package.json"
+  },
+  "{92DCA179-2FD7-490C-9E9B-50AC7AB5C248}": {
+    "source": "const request = require('httprequest')\r\n\r\nconst replace = function translate_replace(html) {\r\n    return html.replace(/(<\\/)( )([A-z]+>)/g, '$1$3')\r\n}\r\n\r\nconst translate = function translate_translate(api, source = null, target = 'en', text, contentType) {\r\n    const body = unescape(request('get', api, { params: { text, source, target, contentType } }).responseText)\r\n    if (contentType === 'html') return replace(body)\r\n    return body\r\n}\r\n\r\nmodule.exports = translate",
+    "mapping": {},
+    "path": "{gas-translate}/src/gas-translate.js"
+  },
+  "{197632B5-68F5-4190-BC46-584C61E6A712}": {
+    "source": "{\n  \"name\": \"gas-translate\",\n  \"version\": \"0.1.4\",\n  \"description\": \"Language translation using Google apps script\",\n  \"main\": \"./src/gas-translate.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/wachaon/gas-translate.git\"\n  },\n  \"keywords\": [\n    \"wes\",\n    \"Google Apps Script\",\n    \"gas\",\n    \"translate\"\n  ],\n  \"author\": \"wachaon\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/wachaon/gas-translate/issues\"\n  },\n  \"homepage\": \"https://github.com/wachaon/gas-translate#readme\"\n}",
+    "path": "{gas-translate}/package.json"
+  }
+}
